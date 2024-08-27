@@ -5,6 +5,6 @@ Used the SDL2 Library
 Ported to a web build with Emscripten
 
 Post Jam Changes:
-Fixed mountain scene background when strength is less than max.\n
-Last dialogue wasn't being display, so I fixed it.\n
-Fixed some dialogue font scaling issues.\n
+Fixed mountain scene background when strength is less than max.
+Last dialogue wasn't being display, so I fixed it.
+Fixed some dialogue font scaling issues.
