@@ -137,11 +137,11 @@ void Entity_move(Entity *entity, SDL_FRect *colliders, int size) {
 
     if (entity->yVel != 0)
       entity->onGround = 0;
-  }else{
-    if (entity->up == 0 && entity->down == 0){
+  } else {
+    if (entity->up == 0 && entity->down == 0) {
       entity->yVel = 0;
     }
-    if (entity->left == 0 && entity->right == 0){
+    if (entity->left == 0 && entity->right == 0) {
       entity->xVel = 0;
     }
   }
@@ -277,6 +277,14 @@ void Entity_handleEvent(Entity *entity, SDL_Event *e) {
     }
   }
 }
+
+void Entity_updateCollider(Entity *entity) {
+  entity->collider.x = entity->xPos;
+  entity->collider.y = entity->yPos;
+  entity->collider.w = entity->width;
+  entity->collider.h = entity->height;
+}
+
 bool Entity_checkCollision(Entity *entity, SDL_FRect rect) {
   if (entity->collider.x + entity->width > rect.x &&
       entity->collider.x < rect.x + rect.w &&
